@@ -1,24 +1,9 @@
-# Import required libraries
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-# ---------------------------------------------------------------------------------------------------------------- If
-# you don't want to run nltk.download() every time you execute your script, you can pre-download the NLTK resources
-# and ensure they are available in the correct directory. Once the resources are downloaded, NLTK will automatically
-# detect them, and you won't need to call nltk.download() again.
-# ----------------------------------------------------------------------------------------------------------
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# Sample text
-text = "A cat sat on the mat.."
-print("Text for example:", text)
-# 1) Tokenization: Breaking text into smaller pieces
-tokens = word_tokenize(text)
-print("Tokenized Text:", tokens)
-# 2) Normalization: Lowercasing & Removing Punctuation
-normalized_tokens = [word.lower() for word in tokens if word.isalnum()]
-print("Normalized Text:", normalized_tokens)
-# 3) Stop Word Removal: Cutting Out the Noise
-stop_words = set(stopwords.words('english'))
-filtered_tokens = [word for word in normalized_tokens if word not in stop_words]
-print("Filtered Text (Stop Words Removed):", filtered_tokens)
+This code demonstrates tokenization, normalization, and stop word removal – the backbone of NLP!
+
+NLTK (Natural Language Toolkit):
+✅ The go-to library for NLP tasks like tokenization, stop word removal, and more.
+✅ Uses specific resources like punkt (for tokenization) and stopwords (for stop word removal).
+
+Pro Tips: 
+✅ Pre-download NLTK resources once, and you’re good to go!
+✅ If you want to avoid NLTK altogether, you can use spaCy, a modern NLP library that does not require separate downloads for basic resources.
